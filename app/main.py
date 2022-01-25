@@ -30,7 +30,6 @@ class Item(BaseModel):
     value: int = Field(example=4, gt=0, lt=10)  # 0 < value < 10
 
 
-# learn to adapt async and await. check if they are to be added for performance and scalability
 @app.get('/')
 def get_tag_stats():
     docs = collection_ref.stream()
